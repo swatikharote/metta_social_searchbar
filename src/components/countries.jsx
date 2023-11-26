@@ -1,7 +1,10 @@
 import React from 'react'
+import Country from './Country'
 
-export const countries = () => {
+export const Countries = ({ countries }) => {
     return (
-        <div>countries</div>
+        <div className='countries'>
+            {countries?.map((country, index) => (<Country key={index} country={country} />))}
+        </div>
     )
 }
